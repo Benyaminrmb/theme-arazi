@@ -21,7 +21,7 @@ html {
     left: -30%;
     height: 1px;
     align-items: center;
-    background: #f00;
+    @apply border border-gray-200;
     justify-content: center;
 }
 .step-box .item {
