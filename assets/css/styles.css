@@ -3,5 +3,21 @@
 @tailwind utilities;
 
 body{
-    @apply overflow-hidden
+    @apply overflow-hidden bg-body-gray !important;
+}
+
+html{
+    @apply  bg-body-gray !important;
+}
+.step-box{
+    @apply grid bg-white justify-center items-center rounded-lg p-10 grid-cols-8 w-full
+}
+.step-box .item{
+    @apply flex flex-wrap relative
+}
+.step-box .item svg{
+    @apply w-10
+}
+.step-box .item .line {
+    @apply h-[1px] bg-gray-300 w-full
 }

@@ -10,5 +10,13 @@ module.exports = {
   variants: {
     extend: {},
   },
+  theme: {
+    extend: {
+      colors: {
+        'header-blue': '#0A1660',
+        'body-gray': '#E7E7E7',
+      },
+    }
+  },
   plugins: [require("daisyui")],
 };
