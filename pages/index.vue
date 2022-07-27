@@ -67,3 +67,8 @@
   </div>
 
 </template>
+<style scoped>
+body{
+  @apply overflow-hidden !important;
+}
+</style>

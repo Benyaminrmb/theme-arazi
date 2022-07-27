@@ -2,22 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    @apply overflow-hidden bg-body-gray !important;
+body {
+  @apply bg-body-gray !important;
 }
 
-html{
-    @apply  bg-body-gray !important;
+html {
+  @apply bg-body-gray !important;
 }
-.step-box{
-    @apply grid bg-white justify-center items-center rounded-lg p-10 grid-cols-8 w-full
+.step-box {
+  @apply flex bg-white justify-between items-center rounded-lg p-10   w-full;
 }
-.step-box .item{
-    @apply flex flex-wrap relative
+.step-box .item::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    left: -30%;
+    height: 1px;
+    align-items: center;
+    background: #f00;
+    justify-content: center;
 }
-.step-box .item svg{
-    @apply w-10
+.step-box .item {
+
+  @apply flex flex-wrap relative w-full justify-center items-center;
+  @apply last:after:hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  /*@apply after:absolute after:h-[2px] after:right-[50px] after:top-[20px] after:bg-gray-300;*/
+  /*@apply after:xl.2:w-[290px] after:xl.3:w-[257px] after:xl.4:w-[225px] after:xl.5:w-[190px] after:xl.6:w-[150px] after:xl.7:w-[160px] after:w-0 !important;*/
 }
-.step-box .item .line {
-    @apply h-[1px] bg-gray-300 w-full
+
+.step-box .item svg {
+  @apply w-10 h-10;
+}
+.has-two-boxes {
+  @apply grid gap-80 grid-cols-2 justify-between w-full mt-20;
+}
+.has-two-boxes .item {
+  @apply flex gap-4 flex-wrap justify-center w-full border-[8px] p-6 border-dashed border-header-blue;
+}
+.has-two-boxes .item .muted-text {
+  @apply text-gray-500 gap-1 gap-y-0.5 w-full flex flex-wrap justify-center;
+}
+.btn-green {
+  @apply bg-green-800 rounded-md text-xl text-white flex transition ease-in-out;
+  @apply hover:bg-green-700;
 }
