@@ -11,11 +11,10 @@
     </div>
 
     <div class="has-two-boxes">
-      <div class="item">
+      <div class="item-dashed">
         <span class="text-xl font-bold"> انتخاب تصویر اول </span>
-        <span
-          class="muted-text">
-          <span class="flex w-full justify-center">
+        <span class="muted-text">
+          <span class="flex w-full text-center justify-center">
             کاربر با کلیک کردن بر روی این جعبه میتواند تصویر
           </span>
           <span class="flex">موردنظر در </span>
@@ -23,11 +22,10 @@
           <span class="flex">را انتخاب نماید</span>
         </span>
       </div>
-      <div class="item">
+      <div class="item-dashed">
         <span class="text-xl font-bold"> انتخاب تصویر دوم </span>
-        <span
-          class="muted-text">
-          <span class="flex w-full justify-center">
+        <span class="muted-text">
+          <span class="flex w-full text-center justify-center">
             کاربر با کلیک کردن بر روی این جعبه میتواند تصویر
           </span>
           <span class="flex">موردنظر در </span>
@@ -38,17 +36,15 @@
     </div>
 
     <div class="flex flex-wrap w-full mt-20 justify-center">
-      <button class="btn-green px-16 p-2">
-        بارگذاری تصاویر
-      </button>
+      <button class="btn-green px-16 p-2">بارگذاری تصاویر</button>
     </div>
   </NuxtLayout>
 </template>
 
-<script>
-export default {
-  name: '2',
-}
+<script setup>
+useHead({
+  title: 'بارگذاری تصویر',
+})
 </script>
 
 <style scoped></style>

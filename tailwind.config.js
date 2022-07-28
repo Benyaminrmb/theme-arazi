@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         'header-blue': '#0A1660',
         'body-gray': '#E7E7E7',
+        'pdf': '#2D5C5B',
       },
     },
     screens: {

@@ -10,20 +10,24 @@ html {
   @apply bg-body-gray !important;
 }
 .step-box {
-  @apply flex bg-white justify-between items-center rounded-lg p-10   w-full;
+  @apply flex bg-white justify-between gap-5 items-center rounded-lg md:px-10 p-10 px-2  overflow-auto w-full;
 }
-.step-box .item::after {
-    content: "";
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    width: 55%;
-    left: -30%;
-    height: 1px;
-    align-items: center;
-    @apply border border-gray-200;
-    justify-content: center;
+@media (min-width: 768px){
+    .step-box .item::after {
+        content: "";
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        width: 55%;
+        left: -30%;
+        height: 1px;
+        align-items: center;
+        @apply border border-gray-200;
+        justify-content: center;
+    }
+
 }
+
 .step-box .item {
 
   @apply flex flex-wrap relative w-full justify-center items-center;
@@ -36,18 +40,35 @@ html {
 }
 
 .step-box .item svg {
-  @apply w-10 h-10;
+  @apply w-10 h-10 fill-gray-400;
+}
+.step-box .router-link-exact-active.item svg {
+    @apply w-10 h-10 fill-header-blue;
 }
 .has-two-boxes {
-  @apply grid gap-80 grid-cols-2 justify-between w-full mt-20;
+  @apply grid md:gap-80 gap-10 md:grid-cols-2 grid-cols-1 justify-between w-full mt-20;
 }
-.has-two-boxes .item {
+.has-two-boxes .item-dashed {
   @apply flex gap-4 flex-wrap justify-center w-full border-[8px] p-6 border-dashed border-header-blue;
 }
-.has-two-boxes .item .muted-text {
+
+.has-two-boxes .item-dashed .muted-text {
   @apply text-gray-500 gap-1 gap-y-0.5 w-full flex flex-wrap justify-center;
+}
+.has-two-boxes .item-solid {
+    @apply flex gap-4 flex-wrap  w-full border p-12 border-gray-300;
+}
+.has-one-box {
+    @apply grid grid-cols-1 w-full mt-20 ;
+}
+.has-one-box .item-solid {
+    @apply flex gap-4 flex-wrap w-full border p-12 border-gray-300 rounded-md;
 }
 .btn-green {
   @apply bg-green-800 rounded-md text-xl text-white flex transition ease-in-out;
+  @apply hover:bg-green-700;
+}
+.btn-pdf {
+  @apply bg-pdf rounded-md text-xl text-white flex transition ease-in-out;
   @apply hover:bg-green-700;
 }
